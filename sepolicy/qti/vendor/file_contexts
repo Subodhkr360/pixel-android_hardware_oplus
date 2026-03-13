@@ -199,6 +199,12 @@
 # Widevine
 /vendor/bin/wvmkiller    u:object_r:vendor_wvmkiller_exec:s0
 
+# USB fast charge
+/sys/module/oplus_chg/parameters/force_fast_charge      u:object_r:vendor_sysfs_fastcharge:s0
+/sys/module/oplus_chg/parameters/ffc_val                u:object_r:vendor_sysfs_fastcharge:s0
+/sys/devices/platform/soc/soc:oplus,chg_intf/oplus_chg/usb/fastchg_status         u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/soc:oplus,chg_intf/soc:oplus,chg_intf:oplus,wireless-charge/oplus_chg/wireless/fastchg_status u:object_r:vendor_sysfs_battery_supply:s0
+
 # Wireless charging
 /(odm|vendor/odm)/bin/hw/gauged       u:object_r:wlchgmonitor_exec:s0
 /(odm|vendor/odm)/bin/hw/wlschgd      u:object_r:wlchgmonitor_exec:s0
